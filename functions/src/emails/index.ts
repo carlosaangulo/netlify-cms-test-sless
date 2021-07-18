@@ -8,20 +8,20 @@ import {
 export const sendWelcomeEmail = (user) => {
   // Send welcome email
   const emailTemplate = {
-    From: 'jake@raterfox.com',
+    From: 'test@profang.ca',
     To: user.email,
     TemplateId: welcomeTemplateId,
     TemplateModel: {
       product_url: 'https://demo.serverless.page/',
       product_name: 'Serverless SaaS Demo',
       name: user.name,
-      action_url: 'https://demo.serverless.page/account/billing',
-      support_email: 'jake@raterfox.com',
+      action_url: 'https://profang.ca', //https://demo.serverless.page/account/billing
+      support_email: 'test@profang.ca',
       sender_name: 'Jake',
-      help_url: 'https://demo.serverless.page/',
+      help_url: 'https://profang.ca/', //https://demo.serverless.page
       company_name: 'Serverless SaaS',
       company_address: '',
-      login_url: 'https://demo.serverless.page/login',
+      login_url: 'https://profang.ca/login', //https://demo.serverless.page/login
     },
   };
 
@@ -41,20 +41,20 @@ export const sendTeamInviteEmail = functions.https.onCall(
     }
 
     const emailTemplate = {
-      From: 'jake@raterfox.com',
+      From: 'test@profang.ca',
       To: data.emailTo,
       TemplateId: teamInviteTemplateId,
       TemplateAlias: 'user-invitation',
       TemplateModel: {
-        product_url: 'https://demo.serverless.page',
+        product_url: 'https://profang.ca',
         product_name: 'Serverless SaaS Demo',
         name: '',
         invite_sender_name: data.teamOwnerName,
         invite_sender_organization_name: data.teamName,
-        action_url: `https://demo.serverless.page/signup?teamId=${data.teamId}&email=${data.emailTo}`,
-        support_email: 'https://demo.serverless.page/',
-        live_chat_url: 'https://demo.serverless.page/',
-        help_url: 'https://demo.serverless.page/',
+        action_url: `https://profang.ca/signup?teamId=${data.teamId}&email=${data.emailTo}`,
+        support_email: 'https://profang.ca/',
+        live_chat_url: 'https://profang.ca/',
+        help_url: 'https://profang.ca/',
         company_name: 'Serverless SaaS Demo',
         company_address: 'Serverless SaaS Demo',
       },

@@ -3,7 +3,7 @@ export default {
   backend: {
     name: 'github',
     repo: 'carlosaangulo/super-crm',
-    branch: 'master',
+    branch: 'main',
     squash_merges: true,
     // Uncomment these lines and replace the base URL when deploying to Vercel
     // base_url: 'https://us-central1-serverless-saas.cloudfunctions.net/',

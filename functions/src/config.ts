@@ -25,11 +25,11 @@ export const proProductId = functions.config().stripe.pro_product_id;
 
 export const stripe = new Stripe(stripeSecretKey, { apiVersion: '2020-08-27' });
 
-// Postmark
-export const postMarkApiKey = functions.config().postmark.api_key;
-export const welcomeTemplateId = functions.config().postmark
-  .welcome_template_id;
-export const teamInviteTemplateId = functions.config().postmark
-  .team_invite_template_id;
+// // Postmark
+// export const postMarkApiKey = functions.config().postmark.api_key;
+// export const welcomeTemplateId = functions.config().postmark
+//   .welcome_template_id;
+// export const teamInviteTemplateId = functions.config().postmark
+//   .team_invite_template_id;
 
-export const postmarkClient = new ServerClient(postMarkApiKey);
+// export const postmarkClient = new ServerClient(postMarkApiKey);
